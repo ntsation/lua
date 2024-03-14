@@ -1,11 +1,14 @@
-math.randomseed(os.time())
+-- Função para gerar um número aleatório entre 1 e 100
+math.randomseed(os.time()) -- Inicializa a semente do gerador de números
 local numeroSecreto = math.random(1, 100)
 
+-- Função para ler uma entrada do jogador
 function lerEntrada()
    io.write("Adivinhe o número de 1 a 100: ")
-   return io.read("n")
+   return io.read("n") -- Lê um número
 end 
 
+-- Função principal
 function jogo()
    local tentativas = 0
    local acertou = false
@@ -27,4 +30,5 @@ function jogo()
    end
 end
 
+-- Inicializa o jogo
 jogo()
